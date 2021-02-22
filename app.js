@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.urlencoded({
     extended: true,
 }))
@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
     res.render('Home');
 })
 
-app.use('/', routes);
+app.use('/', cors(), routes);
 
 app.listen(port, () => {
     console.log('listening to the port ' + port);
