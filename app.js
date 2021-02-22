@@ -1,11 +1,14 @@
-const express = require('express');
+var express = require('express');
 const routes = require('./Routes/API-Routes');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-var cors = require('cors');
-app.use(cors());
 
-const app = express();
+var app = express();
+
+var cors = require('cors')
+app.use(cors()) 
+
+
 const port = process.env.PORT || 8080;
 
 
