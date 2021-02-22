@@ -2,10 +2,13 @@ const express = require('express');
 const routes = require('./Routes/API-Routes');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+var cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 8080;
 
+
+app.use(cors());
 app.use(bodyParser.urlencoded({
     extended: true,
 }))
